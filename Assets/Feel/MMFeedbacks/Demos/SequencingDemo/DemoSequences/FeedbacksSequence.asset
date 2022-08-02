@@ -15,7 +15,7 @@ MonoBehaviour:
   Length: 5.3333335
   OriginalSequence:
     Line: []
-  EndSilenceDuration: 0.3
+  EndSilenceDuration: 0.33333334
   SequenceTracks:
   - ID: 0
     TrackColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
@@ -44,17 +44,17 @@ MonoBehaviour:
     - Timestamp: 0.33333334
       ID: -1
     - Timestamp: 0.6666667
-      ID: 0
+      ID: -1
     - Timestamp: 1
       ID: -1
     - Timestamp: 1.3333334
       ID: 0
     - Timestamp: 1.6666667
-      ID: -1
-    - Timestamp: 2
       ID: 0
-    - Timestamp: 2.3333335
+    - Timestamp: 2
       ID: -1
+    - Timestamp: 2.3333335
+      ID: 0
     - Timestamp: 2.6666667
       ID: 0
     - Timestamp: 3
@@ -66,28 +66,28 @@ MonoBehaviour:
     - Timestamp: 4
       ID: 0
     - Timestamp: 4.3333335
-      ID: -1
-    - Timestamp: 4.666667
       ID: 0
+    - Timestamp: 4.666667
+      ID: -1
     - Timestamp: 5
       ID: -1
   - Line:
     - Timestamp: 0
-      ID: 1
+      ID: -1
     - Timestamp: 0.33333334
-      ID: -1
+      ID: 1
     - Timestamp: 0.6666667
-      ID: 1
+      ID: -1
     - Timestamp: 1
-      ID: -1
-    - Timestamp: 1.3333334
       ID: 1
-    - Timestamp: 1.6666667
+    - Timestamp: 1.3333334
       ID: -1
+    - Timestamp: 1.6666667
+      ID: 1
     - Timestamp: 2
       ID: 1
     - Timestamp: 2.3333335
-      ID: 1
+      ID: -1
     - Timestamp: 2.6666667
       ID: 1
     - Timestamp: 3
@@ -99,34 +99,34 @@ MonoBehaviour:
     - Timestamp: 4
       ID: 1
     - Timestamp: 4.3333335
-      ID: -1
-    - Timestamp: 4.666667
       ID: 1
+    - Timestamp: 4.666667
+      ID: -1
     - Timestamp: 5
       ID: -1
   - Line:
     - Timestamp: 0
-      ID: 2
-    - Timestamp: 0.33333334
-      ID: 2
-    - Timestamp: 0.6666667
       ID: -1
+    - Timestamp: 0.33333334
+      ID: -1
+    - Timestamp: 0.6666667
+      ID: 2
     - Timestamp: 1
       ID: -1
     - Timestamp: 1.3333334
-      ID: 2
+      ID: -1
     - Timestamp: 1.6666667
       ID: -1
     - Timestamp: 2
-      ID: -1
+      ID: 2
     - Timestamp: 2.3333335
       ID: 2
     - Timestamp: 2.6666667
-      ID: 2
+      ID: -1
     - Timestamp: 3
       ID: 2
     - Timestamp: 3.3333335
-      ID: -1
+      ID: 2
     - Timestamp: 3.6666667
       ID: -1
     - Timestamp: 4
@@ -136,5 +136,5 @@ MonoBehaviour:
     - Timestamp: 4.666667
       ID: -1
     - Timestamp: 5
-      ID: 2
+      ID: -1
   RandomizeTrackColorsButton: 0
