@@ -178,7 +178,6 @@ MonoBehaviour:
         m_Calls: []
   DebugActive: 0
   FeedbacksList:
-  - rid: 6786135241080701082
   - rid: 6786135241080701081
   - rid: 6786135241080701078
   - rid: 6786135241080701062
@@ -186,6 +185,7 @@ MonoBehaviour:
   - rid: 6786135241080701073
   - rid: 6786135241080701074
   - rid: 6786135241080701083
+  - rid: 8424580201191571459
   - rid: 6786135241080701077
   - rid: 6786135241080701075
   KeepPlayModeChanges: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
           TargetBPM: 120
         Owner: {fileID: 7230098988726048625}
         DebugActive: 0
-        PauseDuration: 5
+        PauseDuration: 1
         RandomizePauseDuration: 0
         MinPauseDuration: 1
         MaxPauseDuration: 3
@@ -581,7 +581,7 @@ MonoBehaviour:
     - rid: 6786135241080701081
       type: {class: MMF_FreezeFrame, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
       data:
-        Active: 1
+        Active: 0
         UniqueID: -1110738162
         Label: Freeze Frame
         Channel: 0
@@ -611,39 +611,6 @@ MonoBehaviour:
         DebugActive: 0
         FreezeFrameDuration: 0.02
         MinimumTimescaleThreshold: 0.1
-    - rid: 6786135241080701082
-      type: {class: MMF_Destroy, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
-      data:
-        Active: 1
-        UniqueID: 986997033
-        Label: Destroy
-        Channel: 0
-        Chance: 100
-        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
-        Timing:
-          TimescaleMode: 0
-          ExcludeFromHoldingPauses: 0
-          ContributeToTotalDuration: 1
-          InitialDelay: 0
-          CooldownDuration: 0
-          InterruptsOnStop: 1
-          NumberOfRepeats: 0
-          RepeatForever: 0
-          DelayBetweenRepeats: 1
-          MMFeedbacksDirectionCondition: 0
-          PlayDirection: 0
-          ConstantIntensity: 0
-          UseIntensityInterval: 0
-          IntensityIntervalMin: 0
-          IntensityIntervalMax: 0
-          Sequence: {fileID: 0}
-          TrackID: 0
-          Quantized: 0
-          TargetBPM: 120
-        Owner: {fileID: 7230098988726048625}
-        DebugActive: 0
-        TargetGameObject: {fileID: 6633600765429003834}
-        Mode: 0
     - rid: 6786135241080701083
       type: {class: MMF_NVClip, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.NiceVibrations}
       data:
@@ -690,6 +657,48 @@ MonoBehaviour:
           OnlyPlayIfAdvancedRequirementsMet: 0
           OnlyPlayIfAmplitudeModulationSupported: 0
           OnlyPlayIfFrequencyModulationSupported: 0
+    - rid: 8424580201191571459
+      type: {class: MMF_SetActive, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
+      data:
+        Active: 1
+        UniqueID: 63822815
+        Label: Set Active
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 7230098988726048625}
+        DebugActive: 0
+        TargetGameObject: {fileID: 6633600765429003834}
+        SetStateOnInit: 0
+        StateOnInit: 1
+        SetStateOnPlay: 1
+        StateOnPlay: 1
+        SetStateOnStop: 0
+        StateOnStop: 1
+        SetStateOnReset: 0
+        StateOnReset: 1
+        SetStateOnSkip: 0
+        StateOnSkip: 1
 --- !u!114 &6506771342999562154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1354,7 +1363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12706597605964542, guid: d8e45a35391a2584ba4bf33a18f9daf8, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 12706597605964542, guid: d8e45a35391a2584ba4bf33a18f9daf8, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -1362,7 +1371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12706597605964542, guid: d8e45a35391a2584ba4bf33a18f9daf8, type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 12706597605964542, guid: d8e45a35391a2584ba4bf33a18f9daf8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -1375,6 +1384,10 @@ PrefabInstance:
     - target: {fileID: 12706597605964542, guid: d8e45a35391a2584ba4bf33a18f9daf8, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 12706597605964542, guid: d8e45a35391a2584ba4bf33a18f9daf8, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 12706597605964543, guid: d8e45a35391a2584ba4bf33a18f9daf8, type: 3}
       propertyPath: m_RootOrder

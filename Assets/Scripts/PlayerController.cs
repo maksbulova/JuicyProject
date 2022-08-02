@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1;
     [SerializeField] private float moveMinInput = 0.2f;
     [Space]
-    [SerializeField] private float jumpPower = 1;
+    [SerializeField] private float jumpPower = 500;
     [SerializeField] private float jumpMinInput = 0.2f;
 
     [Header("VFX")]

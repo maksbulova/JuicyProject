@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     [Header("VFX")]
     [SerializeField] private MMF_Player hitFeedback;
     [SerializeField] private MMF_Player deathFeedback;
+    [SerializeField] private float knockbackPower = 100;
+    [SerializeField] private Vector3 additinoalKnockback = Vector3.up;
 
 
     public Collider Collider => enemyCollider;
@@ -20,7 +22,8 @@ public class Enemy : MonoBehaviour
 
     public void RecieveHit(BulletHitInfo bulletHitInfo)
     {
-        enemyRB.AddForce(bulletHitInfo.push);
+        Vector3 force = enemyRB.mass * enemyRB.drag * knockbackPower * bulletHitInfo.push + additinoalKnockback;
+        enemyRB.AddForce(force);
         RecieveDamage(bulletHitInfo.damage);
     }
 
@@ -28,10 +31,14 @@ public class Enemy : MonoBehaviour
     {
         health -= dmg;
 
-        hitFeedback.PlayFeedbacks();
-
         if (health <= 0)
+        {
             Death();
+        }
+        else
+        {
+            hitFeedback.PlayFeedbacks();
+        }
     }
 
     private void Death()
