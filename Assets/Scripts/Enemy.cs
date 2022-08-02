@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.Feedbacks;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float health = 3;
     [SerializeField] private Collider enemyCollider;
     [SerializeField] private Rigidbody enemyRB;
+
+    [Header("VFX")]
+    [SerializeField] private MMF_Player hitFeedback;
+    [SerializeField] private MMF_Player deathFeedback;
+
 
     public Collider Collider => enemyCollider;
 
@@ -22,7 +28,7 @@ public class Enemy : MonoBehaviour
     {
         health -= dmg;
 
-        // Feedback
+        hitFeedback.PlayFeedbacks();
 
         if (health <= 0)
             Death();
@@ -30,9 +36,10 @@ public class Enemy : MonoBehaviour
 
     private void Death()
     {
-        // Feedback
+        deathFeedback.PlayFeedbacks();
 
         OnDeath?.Invoke(this);
-        Destroy(gameObject);
+
+        // Destroy(gameObject);
     }
 }

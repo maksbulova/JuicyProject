@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using MoreMountains.Feedbacks;
 public class ShottingController : MonoBehaviour
 {
     [Header("Shoting")]
@@ -12,6 +12,10 @@ public class ShottingController : MonoBehaviour
     [Header("Raycast")]
     [SerializeField] private Collider raycastTargetCollider;
     [SerializeField] private float raycastDistance = 100;
+
+    [Header("VFX")]
+    [SerializeField] private MMF_Player shotFeedback;
+
 
     private Camera mainCamera;
 
@@ -42,5 +46,7 @@ public class ShottingController : MonoBehaviour
         Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.LookRotation(shootDirection));
 
         bullet.Init(shootDirection, bulletVelocity, bulletDamage);
+
+        shotFeedback.PlayFeedbacks();
     }
 }

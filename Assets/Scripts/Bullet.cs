@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.Feedbacks;
+
 
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody bulletRB;
     [SerializeField] private LayerMask hittableLayers;
+
+    [Header("VFX")]
+    [SerializeField] private MMF_Player flyFeedback;
+    [SerializeField] private MMF_Player hitFeedback;
 
     private float damage;
 
@@ -22,6 +28,9 @@ public class Bullet : MonoBehaviour
     {
         bulletRB.velocity = direction * velocity;
         this.damage = damage;
+
+        flyFeedback.Initialization();
+        flyFeedback.PlayFeedbacks();
     }
 
     private void Hit(Collider hitObject)
@@ -29,9 +38,9 @@ public class Bullet : MonoBehaviour
         BulletHitInfo hitInfo = new BulletHitInfo(bulletRB.velocity * bulletRB.mass, damage);
         SceneController.Instance.EnemyController.OnEnemyHit(hitObject, hitInfo);
 
-        // Feedback
-
-        Destroy(gameObject);
+        flyFeedback.StopFeedbacks();
+        hitFeedback.Initialization();
+        hitFeedback.PlayFeedbacks(transform.position);
     }
 }
 
