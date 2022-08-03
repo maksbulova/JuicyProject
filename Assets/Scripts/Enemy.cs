@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private MMF_Player landFeedback;
     [SerializeField] private MMF_Player hitFeedback;
     [SerializeField] private MMF_Player deathFeedback;
+    [SerializeField] private MMF_Player spawnFeedback;
     [SerializeField] private float knockbackPower = 10;
     [SerializeField] private Vector3 additinoalKnockback = Vector3.up;
     [SerializeField] private ShockWaveSource swSource;
@@ -24,6 +25,12 @@ public class Enemy : MonoBehaviour
     public Collider Collider => enemyCollider;
 
     public event System.Action<Enemy> OnDeath;
+
+    private void Start()
+    {
+        spawnFeedback.Initialization();
+        spawnFeedback.PlayFeedbacks();
+    }
 
     private void FixedUpdate()
     {
