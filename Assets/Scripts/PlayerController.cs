@@ -6,7 +6,6 @@ using MoreMountains.Feedbacks;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    // [SerializeField] private Joystick joystick;
     [SerializeField] private Rigidbody playerRB;
     [Space]
     public float moveSpeed = 1;
@@ -14,9 +13,9 @@ public class PlayerController : MonoBehaviour
     [Space]
     [SerializeField] private KeyCode jumpKey = KeyCode.W;
     [SerializeField] private float jumpPower = 500;
-    // [SerializeField] private float jumpMinInput = 0.2f;
 
     [Header("VFX")]
+    [SerializeField] private MMF_Player moveFeedback;
     [SerializeField] private MMF_Player jumpFeedback;
     [SerializeField] private MMF_Player landFeedback;
     [SerializeField] private float chargeDuration = 0.2f;
@@ -26,6 +25,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float minFallVelocity = 1f;
     [SerializeField] private float maxFallVelocity = 1f;
     [SerializeField] private float minVelocity = 0.01f;
+
+
+    [Header("Knockback")]
+    [SerializeField] private Vector3 bonusKnockbackDirection = Vector3.up;
+    [SerializeField] private float knockbackPower = 100;
+    [SerializeField] private float maxVerticalKnockback = 100;
+
 
     private bool isCharging;
     private bool isJumping = true;
@@ -46,11 +52,21 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal") * moveSpeed * playerRB.mass * playerRB.drag;
         playerRB.velocity = new Vector3(horizontalInput, playerRB.velocity.y);
+
+        if (Mathf.Abs(horizontalInput) > 0 && !isCharging && !isJumping)
+        {
+            moveFeedback.PlayFeedbacks();
+        }
+        else
+        {
+            moveFeedback.StopFeedbacks();
+        }
+
     }
 
     private void HandleJump()
     {
-        if (Input.GetKeyDown(jumpKey) && !isJumping && !isCharging)
+        if (Input.GetKey(jumpKey) && !isJumping && !isCharging)
         {
             landFeedback.StopFeedbacks();
             jumpFeedback.PlayFeedbacks();
@@ -63,7 +79,7 @@ public class PlayerController : MonoBehaviour
         if (Mathf.Abs(playerRB.velocity.y) < minVelocity && previousFallSpeed < minVelocity)
         {
             isJumping = false;
-            landFeedback.PlayFeedbacks(/*transform.position, Mathf.Clamp(fallImpact, minFallIntencivity, maxFallIntencivity)*/);
+            landFeedback.PlayFeedbacks();
         }
         // flying up / down
         else if (Mathf.Abs(playerRB.velocity.y) >= minVelocity && previousFallSpeed >= minVelocity)
@@ -86,5 +102,12 @@ public class PlayerController : MonoBehaviour
 
         previousFallSpeed = 0.1f;
         isJumping = true;
+    }
+
+    public void Knockback(Vector3 knockbackDirection)
+    {
+        Vector3 force = playerRB.mass * playerRB.drag * knockbackPower * knockbackDirection.normalized + bonusKnockbackDirection;
+        force.y = Mathf.Clamp(force.y, -maxVerticalKnockback, maxVerticalKnockback);
+        playerRB.AddForce(force);
     }
 }

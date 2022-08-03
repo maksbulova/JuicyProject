@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private MMF_Player landFeedback;
     [SerializeField] private MMF_Player hitFeedback;
     [SerializeField] private MMF_Player deathFeedback;
-    [SerializeField] private float knockbackPower = 100;
+    [SerializeField] private float knockbackPower = 10;
     [SerializeField] private Vector3 additinoalKnockback = Vector3.up;
     [SerializeField] private ShockWaveSource swSource;
     [SerializeField] private float minVelocity = 0.01f;
@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
     {
         Vector3 force = enemyRB.mass * enemyRB.drag * knockbackPower * bulletHitInfo.push + additinoalKnockback;
         enemyRB.AddForce(force);
-        isJumping = true;
+        // isJumping = true;
         RecieveDamage(bulletHitInfo.damage);
     }
 

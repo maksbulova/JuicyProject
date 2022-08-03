@@ -6,6 +6,8 @@ using MoreMountains.Tools;
 
 public class ShottingController : MonoBehaviour
 {
+    [SerializeField] private PlayerController playerController;
+
     [Header("Shoting")]
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private float bulletVelocity;
@@ -54,5 +56,7 @@ public class ShottingController : MonoBehaviour
         bullet.Init(shootDirection, bulletVelocity, bulletDamage);
 
         shotFeedback.PlayFeedbacks();
+
+        playerController.Knockback(-shootDirection);
     }
 }
