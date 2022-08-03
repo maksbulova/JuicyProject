@@ -794,8 +794,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194713309}
   m_LocalRotation: {x: -0.7071051, y: -0, z: -0, w: 0.7071085}
-  m_LocalPosition: {x: 0, y: 4.000001, z: 0}
-  m_LocalScale: {x: 1.5999755, y: 1, z: 0.699947}
+  m_LocalPosition: {x: -0.7664, y: 3.4101, z: 0}
+  m_LocalScale: {x: 3.1083822, y: 1, z: 2.098055}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 688418054}
@@ -2459,8 +2459,8 @@ MonoBehaviour:
   MutualizeWaitingPools: 1
   PoolCanExpand: 1
   Lifetime: {x: 1, y: 1.5}
-  SpawnOffsetMin: {x: 0.2, y: 0.5, z: -2}
-  SpawnOffsetMax: {x: 0.4, y: 0.5, z: -2}
+  SpawnOffsetMin: {x: 0.2, y: 0.5, z: -3.5}
+  SpawnOffsetMax: {x: 0.4, y: 0.5, z: -3.5}
   AnimateMovement: 1
   AnimateX: 1
   RemapXZero: {x: 0, y: 0}
