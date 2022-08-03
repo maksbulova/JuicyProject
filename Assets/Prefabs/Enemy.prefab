@@ -86,6 +86,7 @@ MonoBehaviour:
   - rid: 8424580201191571464
   - rid: 8424580201191571465
   - rid: 8424580201191571466
+  - rid: 6786135262763417600
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   ForceStopFeedbacksOnDisable: 1
@@ -131,6 +132,45 @@ MonoBehaviour:
         FlickerColor: {r: 2, g: 1.8666667, b: 0.78431374, a: 1}
         MaterialIndexes: 
         UseMaterialPropertyBlocks: 0
+    - rid: 6786135262763417600
+      type: {class: MMF_NVPreset, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.NiceVibrations}
+      data:
+        Active: 1
+        UniqueID: -1751029261
+        Label: Haptic Preset
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 9205928540419893286}
+        DebugActive: 0
+        Preset: 4
+        HapticSettings:
+          ForceGamepadID: 0
+          GamepadID: 0
+          OnlyPlayIfHapticsSupported: 1
+          OnlyPlayIfAdvancedRequirementsMet: 0
+          OnlyPlayIfAmplitudeModulationSupported: 0
+          OnlyPlayIfFrequencyModulationSupported: 0
     - rid: 8424580201191571464
       type: {class: MMF_PositionShake, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
       data:
@@ -5282,6 +5322,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4386481959336998371}
+  - {fileID: 5073408640355436296}
   m_Father: {fileID: 3434285005075113240}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5335,12 +5376,15 @@ MonoBehaviour:
         m_Calls: []
   DebugActive: 0
   FeedbacksList:
+  - rid: 6786135262763417603
   - rid: 6786135241080701061
   - rid: 8424580201191571467
   - rid: 8424580201191571456
   - rid: 8424580201191571462
+  - rid: 6786135262763417604
   - rid: 8424580201191571469
   - rid: 8424580201191571468
+  - rid: 6786135262763417601
   - rid: 6786135241080701115
   - rid: 6786135241080701116
   - rid: 6786135241080701118
@@ -5629,6 +5673,193 @@ MonoBehaviour:
           m_RotationOrder: 4
         RemapIntensityZero: 0
         RemapIntensityOne: 40
+    - rid: 6786135262763417601
+      type: {class: MMF_NVPreset, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.NiceVibrations}
+      data:
+        Active: 1
+        UniqueID: -1132217516
+        Label: Haptic Preset
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 1650560045012364170}
+        DebugActive: 0
+        Preset: 5
+        HapticSettings:
+          ForceGamepadID: 0
+          GamepadID: 0
+          OnlyPlayIfHapticsSupported: 1
+          OnlyPlayIfAdvancedRequirementsMet: 0
+          OnlyPlayIfAmplitudeModulationSupported: 0
+          OnlyPlayIfFrequencyModulationSupported: 0
+    - rid: 6786135262763417603
+      type: {class: MMF_NVContinuous, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.NiceVibrations}
+      data:
+        Active: 1
+        UniqueID: -2047401442
+        Label: Haptic Continuous
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 1650560045012364170}
+        DebugActive: 0
+        MinAmplitude: 0.2
+        MaxAmplitude: 0.2
+        MinFrequency: 1
+        MaxFrequency: 1
+        MinDuration: 1
+        MaxDuration: 1
+        UseRealTimeModulation: 0
+        AmplitudeMultiplication:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        ShiftFrequency:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        HapticSettings:
+          ForceGamepadID: 0
+          GamepadID: 0
+          OnlyPlayIfHapticsSupported: 1
+          OnlyPlayIfAdvancedRequirementsMet: 0
+          OnlyPlayIfAmplitudeModulationSupported: 0
+          OnlyPlayIfFrequencyModulationSupported: 0
+    - rid: 6786135262763417604
+      type: {class: MMF_Particles, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
+      data:
+        Active: 1
+        UniqueID: -134472198
+        Label: Particles Play
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 1650560045012364170}
+        DebugActive: 0
+        Mode: 0
+        BoundParticleSystem: {fileID: 5073408640355436298}
+        RandomParticleSystems: []
+        MoveToPosition: 0
+        ActivateOnPlay: 0
+        StopSystemOnInit: 1
     - rid: 8424580201191571456
       type: {class: MMF_SetActive, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
       data:
@@ -6027,6 +6258,7 @@ GameObject:
   - component: {fileID: -4234304491818030441}
   - component: {fileID: 5760690814314972420}
   - component: {fileID: 5760690814314972421}
+  - component: {fileID: 2212543457711055168}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -6070,6 +6302,7 @@ MonoBehaviour:
   deathFeedback: {fileID: 1650560045012364170}
   knockbackPower: 10
   additinoalKnockback: {x: 0, y: 100, z: 0}
+  swSource: {fileID: 2212543457711055168}
 --- !u!65 &5760690814314972420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6099,6 +6332,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 88
   m_CollisionDetection: 0
+--- !u!114 &2212543457711055168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760690814314972422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d764796122337f7488fb7765a26fa900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swSourcePreset: {fileID: 11400000, guid: 5c743558ccc64554d81360c5f74fbe04, type: 2}
 --- !u!1 &5948408468064485806
 GameObject:
   m_ObjectHideFlags: 0
@@ -11311,3 +11557,74 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1001 &3896237126582995815
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5037178293436631968}
+    m_Modifications:
+    - target: {fileID: 8104906208414239853, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239854, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_Name
+      value: Ripple
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+--- !u!4 &5073408640355436296 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8104906208414239855, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+  m_PrefabInstance: {fileID: 3896237126582995815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5073408640355436298 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8104906208414239853, guid: 892aef376be01c54fa50b09e5fe59815, type: 3}
+  m_PrefabInstance: {fileID: 3896237126582995815}
+  m_PrefabAsset: {fileID: 0}

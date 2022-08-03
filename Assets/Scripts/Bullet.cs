@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
         {
             Hit(other);
         }
+
     }
 
     public void Init(Vector3 direction, float velocity, float damage)

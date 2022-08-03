@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private MMF_Player deathFeedback;
     [SerializeField] private float knockbackPower = 100;
     [SerializeField] private Vector3 additinoalKnockback = Vector3.up;
+    [SerializeField] private ShockWaveSource swSource;
 
 
     public Collider Collider => enemyCollider;
@@ -44,6 +45,7 @@ public class Enemy : MonoBehaviour
     private void Death()
     {
         deathFeedback.PlayFeedbacks();
+        swSource.GenerateShoke();
 
         OnDeath?.Invoke(this);
 
