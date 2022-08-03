@@ -15,6 +15,12 @@ public class Bullet : MonoBehaviour
 
     private float damage;
 
+    private void Start()
+    {
+        flyFeedback.Initialization();
+        hitFeedback.Initialization();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         bool targetHittable = hittableLayers == (hittableLayers | (1 << other.gameObject.layer));
@@ -22,7 +28,6 @@ public class Bullet : MonoBehaviour
         {
             Hit(other);
         }
-
     }
 
     public void Init(Vector3 direction, float velocity, float damage)
@@ -30,8 +35,7 @@ public class Bullet : MonoBehaviour
         bulletRB.velocity = direction * velocity;
         this.damage = damage;
 
-        flyFeedback.Initialization();
-        flyFeedback.PlayFeedbacks();
+        StartCoroutine(DelayedInit());
     }
 
     private void Hit(Collider hitObject)
@@ -40,8 +44,14 @@ public class Bullet : MonoBehaviour
         SceneController.Instance.EnemyController.OnEnemyHit(hitObject, hitInfo);
 
         flyFeedback.StopFeedbacks();
-        hitFeedback.Initialization();
         hitFeedback.PlayFeedbacks(transform.position);
+    }
+
+    private IEnumerator DelayedInit()
+    {
+        yield return null;
+
+        flyFeedback.PlayFeedbacks();
     }
 }
 

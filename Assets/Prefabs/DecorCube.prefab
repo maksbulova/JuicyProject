@@ -432,4 +432,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swImpactPreset: {fileID: 11400000, guid: d18d762ee6473b44884a6ccfb09a25d6, type: 2}
-  drawDebug: 1
+  drawDebug: 0

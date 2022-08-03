@@ -5230,15 +5230,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed36a30c48a73d4ba570e6dde9cdb58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
   playerRB: {fileID: 5943224473258367074}
   moveSpeed: 10
   moveMinInput: 0.2
+  jumpKey: 119
   jumpPower: 500
-  jumpMinInput: 0.2
   jumpFeedback: {fileID: 5679546967146546196}
   landFeedback: {fileID: 1485520138722758432}
   chargeDuration: 0.2
+  minFallIntencivity: 0.2
+  maxFallIntencivity: 1
+  minFallVelocity: 1
+  maxFallVelocity: 5
+  minVelocity: 0.001
 --- !u!114 &5943224473258367080
 MonoBehaviour:
   m_ObjectHideFlags: 0
