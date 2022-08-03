@@ -459,7 +459,7 @@ MonoBehaviour:
           TargetBPM: 120
         Owner: {fileID: 6204680896366843959}
         DebugActive: 0
-        ShakeDuration: 0.2
+        ShakeDuration: 0.5
         ResetShakerValuesAfterShake: 1
         ResetTargetValuesAfterShake: 1
         RelativeValues: 1

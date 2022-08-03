@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
 
     public Collider Collider => enemyCollider;
 
+
     public event System.Action<Enemy> OnDeath;
 
     private void Start()

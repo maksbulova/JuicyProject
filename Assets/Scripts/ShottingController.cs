@@ -39,7 +39,13 @@ public class ShottingController : MonoBehaviour
         if (!Input.GetMouseButtonDown(0))
             return;
 
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Vector3 touchPosition = Input.mousePosition;
+
+        //if (Input.touchCount == 0)
+        //    return;
+        //Vector3 touchPosition = Input.touches[Input.touchCount - 1].position;
+
+        Ray ray = mainCamera.ScreenPointToRay(touchPosition);
 
         if (raycastTargetCollider.Raycast(ray, out RaycastHit hitInfo, raycastDistance))
             Shoot(hitInfo.point);

@@ -6,12 +6,13 @@ using MoreMountains.Feedbacks;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
+    [SerializeField] private Joystick joystick;
     [SerializeField] private Rigidbody playerRB;
     [Space]
     public float moveSpeed = 1;
     [SerializeField] private float moveMinInput = 0.2f;
     [Space]
-    [SerializeField] private KeyCode jumpKey = KeyCode.W;
+    [SerializeField] private float minJumpInput = 0.25f;
     [SerializeField] private float jumpPower = 500;
 
     [Header("VFX")]
@@ -39,6 +40,8 @@ public class PlayerController : MonoBehaviour
     private float previousFallSpeed = 0.1f;
     private float fallImpact;
 
+    public bool isMoving => joystick.Direction.sqrMagnitude > 0;
+
     private void FixedUpdate()
     {
         HandleInput();
@@ -50,7 +53,9 @@ public class PlayerController : MonoBehaviour
 
     private void HandleInput()
     {
-        float horizontalInput = Input.GetAxis("Horizontal") * moveSpeed * playerRB.mass * playerRB.drag;
+        float input = joystick.Horizontal;
+        // float input = Input.GetAxis("Horizontal");
+        float horizontalInput = input * moveSpeed * playerRB.mass * playerRB.drag;
         playerRB.velocity = new Vector3(horizontalInput, playerRB.velocity.y);
 
         if (Mathf.Abs(horizontalInput) > 0 && !isCharging && !isJumping)
@@ -66,7 +71,10 @@ public class PlayerController : MonoBehaviour
 
     private void HandleJump()
     {
-        if (Input.GetKey(jumpKey) && !isJumping && !isCharging)
+        float input = joystick.Vertical;
+        //float input = Input.GetAxis("Vertical");
+
+        if (input > minJumpInput && !isJumping && !isCharging)
         {
             landFeedback.StopFeedbacks();
             jumpFeedback.PlayFeedbacks();

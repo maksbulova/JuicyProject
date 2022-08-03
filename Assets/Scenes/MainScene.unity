@@ -622,7 +622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &59870570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.056737266, g: 0.22150233, b: 0.4811321, a: 0}
+  m_BackGroundColor: {r: 0.17354932, g: 0.3247834, b: 0.5660378, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2324,6 +2324,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
   m_PrefabInstance: {fileID: 1615174090}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1615174092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+  m_PrefabInstance: {fileID: 1615174090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1623386885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2761,6 +2772,10 @@ PrefabInstance:
       propertyPath: raycastTargetCollider
       value: 
       objectReference: {fileID: 194713311}
+    - target: {fileID: 5943224473258367081, guid: a0ada8b9ff1bbc544ae03ab49ce41bf0, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1615174092}
     - target: {fileID: 5943224473258367086, guid: a0ada8b9ff1bbc544ae03ab49ce41bf0, type: 3}
       propertyPath: m_RootOrder
       value: 4
